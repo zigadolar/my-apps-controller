@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Apps Table View Controller-->
+        <scene sceneID="mFw-Hg-4fl">
+            <objects>
+                <tableViewController storyboardIdentifier="AppsTableViewController" id="e1Y-qF-sHo" customClass="AppsTableViewController" customModule="Days_Without_An_Incident" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="e5b-j7-oTN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppsTableViewCell" id="BRg-X5-3eb" customClass="AppsTableViewCell" customModule="Days_Without_An_Incident" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="76.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BRg-X5-3eb" id="LWc-mC-QSu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="a6B-uS-Dvo">
+                                            <rect key="frame" x="16" y="8" width="382" height="60.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PgE-mE-M6b" customClass="AppIconView" customModule="Days_Without_An_Incident" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="FrC-gd-f61"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="60" id="MrX-zc-v39"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wK-zW-8AK">
+                                                    <rect key="frame" x="76" y="0.0" width="306" height="60.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="a6B-uS-Dvo" firstAttribute="top" secondItem="LWc-mC-QSu" secondAttribute="top" constant="8" id="FbQ-gs-KIQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="a6B-uS-Dvo" secondAttribute="bottom" constant="8" id="KDk-aY-zuH"/>
+                                        <constraint firstItem="a6B-uS-Dvo" firstAttribute="leading" secondItem="LWc-mC-QSu" secondAttribute="leading" constant="16" id="OBK-Fe-LHC"/>
+                                        <constraint firstAttribute="trailing" secondItem="a6B-uS-Dvo" secondAttribute="trailing" constant="16" id="lH5-wx-3GE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appIcon" destination="PgE-mE-M6b" id="ghd-ck-JKp"/>
+                                    <outlet property="appName" destination="2wK-zW-8AK" id="AkR-3G-EDf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="e1Y-qF-sHo" id="XYZ-6T-rSi"/>
+                            <outlet property="delegate" destination="e1Y-qF-sHo" id="eev-dM-iox"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gBM-pf-L2r"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9Y-KB-hbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731.8840579710145" y="35.491071428571423"/>
+        </scene>
+    </scenes>
+</document>
